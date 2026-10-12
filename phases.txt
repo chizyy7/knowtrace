@@ -1,7 +1,7 @@
 0: Scaffolding - Done
-1: Data Pipeline - Next
-2: BKT Baseline
-3: DKT
+1: Data Pipeline - Done
+2: BKT Baseline - Done
+3: DKT - Next
 4: DKT+
 5: Question Difficulty Prediction
 6: Evaluation & Reporting

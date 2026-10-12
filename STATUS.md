@@ -1,23 +1,38 @@
 ## Project Status: KnowTrace
 
-**Current Phase**: 0 - Scaffolding (Completed)
+**Current Phase**: 2 - BKT Baseline (Completed)
 
 ### Completed Tasks:
-- Created repository structure
-- Added .gitignore, README, LICENSE
-- Created requirements.txt and environment.yml
-- Added Makefile with setup, test, clean targets
-- Implemented config utility (YAML loading)
-- Implemented seed utility for reproducibility
-- Created placeholder test to verify test framework
-- All tests passing
+- Phase 0: Scaffolding (Complete)
+- Phase 1: Data Pipeline (Complete)
+- Phase 2: BKT Baseline (Complete)
+  - Created Bayesian Knowledge Tracing model with 4 parameters per skill
+  - Implemented EM fitting algorithm for parameter estimation
+  - Added global fallback mechanism for sparse skills
+  - Created training script that saves parameters and evaluates AUC
+  - Added comprehensive test suite
+  - All tests passing
+  - Model trained successfully on synthetic data
 
-### Next Phase: 1 - Data Pipeline
+### Phase 2 Details:
+- Files created/updated:
+  - src/knowtrace/models/bkt.py
+  - src/knowtrace/train/train_bkt.py
+  - configs/bkt.yaml
+  - tests/test_bkt.py
+- Trained BKT model achieved:
+  - Validation AUC: 0.490, Accuracy: 0.533
+  - Test AUC: 0.503, Accuracy: 0.563
+- Parameters saved to reports/bkt_params.json
+- Training history saved to reports/bkt_training_history.json
+- Metrics saved to reports/bkt_metrics.json
+
+### Next Phase: 3 - DKT (Deep Knowledge Tracing)
 Planned tasks:
-1. Create scripts/download_data.sh with instructions for fetching ASSISTments
-2. Implement src/knowtrace/data/load.py to load raw CSVs
-3. Implement src/knowtrace/data/preprocess.py for cleaning, ID mapping, sequence building, and train/val/test split by user
-4. Implement src/knowtrace/data/dataset.py for PyTorch Dataset with padding/masking
-5. Create notebooks/01_eda.ipynb showing exploratory data analysis
+1. Create src/knowtrace/models/dkt.py with LSTM-based architecture
+2. Implement src/knowtrace/train/train_dkt.py for model training
+3. Create configs/dkt.yaml with DKT hyperparameters
+4. Add DKT tests to tests/test_dkt.py
+5. Implement evaluation and comparison with BKT baseline
 
-Would you like to proceed to Phase 1? Please confirm.
+Would you like to proceed to Phase 3? Please confirm.

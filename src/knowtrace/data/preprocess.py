@@ -75,7 +75,7 @@ def preprocess(config: PreprocessConfig) -> Tuple[Dict[str, Dict], Dict[str, int
     # Create ID maps (index 0 reserved for padding)
     def create_id_map(series: pd.Series) -> Dict[str, int]:
         """Create mapping from original IDs to consecutive integers starting at 1."""
-        unique_ids = serie
+        unique_ids = series.unique()
         return {uid: idx + 1 for idx, uid in enumerate(unique_ids)}
 
     user_id_map = create_id_map(df["user_id"])
