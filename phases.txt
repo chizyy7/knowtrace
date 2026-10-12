@@ -1,0 +1,9 @@
+0: Scaffolding - Done
+1: Data Pipeline - Next
+2: BKT Baseline
+3: DKT
+4: DKT+
+5: Question Difficulty Prediction
+6: Evaluation & Reporting
+7: Streamlit Demo
+8: Packaging & Deployment

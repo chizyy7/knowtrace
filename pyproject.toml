@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "knowtrace"
+version = "0.1.0"
+description = "Adaptive Knowledge Tracing with Deep Learning"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "chizy"}
+]
+dependencies = [
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "torch>=1.9.0",
+    "pyyaml>=6.0",
+    "pydantic>=2.0",
+    "matplotlib>=3.5.0",
+    "seaborn>=0.11.0",
+    "plotly>=5.0.0",
+    "tqdm>=4.62.0",
+    "streamlit>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/chizyy7/knowtrace"
+
+[project.scripts]
+knowtrace-train-bkt = "knowtrace.train.train_bkt:main"
+knowtrace-train-dkt = "knowtrace.train.train_dkt:main"
+knowtrace-train-difficulty = "knowtrace.train.train_difficulty:main"
+knowtrace-app = "knowtrace.app.streamlit_app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
